@@ -27,6 +27,30 @@
   
     .rechner{background:#e8e8e5}.rechner-lead{max-width:720px;color:#444;font-size:15px}.rechner-fold{max-width:800px;margin-top:24px;background:white;border:1px solid #ccc;border-radius:10px;padding:0 20px}.rechner-fold>summary{padding:19px 0;font-size:16px}.rechner-content{padding:0 0 20px}.rechner-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.rechner-field{display:flex;flex-direction:column;gap:7px;font-size:13px;font-weight:700}.rechner-field input,.rechner-field select{width:100%;border:1px solid #aaa;border-radius:5px;background:white;color:black;font:inherit;padding:11px}.rechner-output{background:#111;color:white;margin-top:20px;padding:19px;border-radius:7px;display:grid;grid-template-columns:1fr 1fr;gap:12px}.rechner-output small{display:block;color:#ccc}.rechner-output strong{display:block;font-size:clamp(22px,3.5vw,32px);font-weight:800}.rechner-note{color:#555;font-size:12px;line-height:1.6;margin:14px 0 0}.rechner .rechner-field input:focus-visible,.rechner .rechner-field select:focus-visible{outline:2px solid #111;outline-offset:2px}@media(max-width:600px){.rechner-grid{grid-template-columns:1fr}.rechner-output{grid-template-columns:1fr}}
 .rechner-totals{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;background:#f1f1ef;border:1px solid #d5d5d2;padding:12px 15px;margin:16px 0 20px;font-size:13px}.rechner-totals strong{font-size:16px;color:#111}.rechner .rechner-field select{min-height:45px}
+
+/* Mobile/tablet offer cards only; desktop layout remains unchanged. */
+@media (max-width: 1024px), (hover: none) and (pointer: coarse) and (max-width: 1366px) {
+  #angebote .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:start}
+  #angebote .card{min-width:0;min-height:0;padding:16px;overflow-wrap:anywhere}
+  #angebote .card-top{gap:6px;flex-wrap:wrap}
+  #angebote .card-icon{flex-shrink:0}
+  #angebote .card-links a,#angebote .card-links .static-link{min-height:44px;gap:4px}
+  #angebote .card details{min-width:0}
+  #angebote .card:has(details[open]){grid-column:1/-1}
+}
+@media (max-width: 700px) {
+  #angebote .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  #angebote .card{padding:12px}
+  #angebote .card-num{font-size:10px;letter-spacing:.04em}
+  #angebote .card-icon{width:32px;height:32px}
+  #angebote .card h3{font-size:17px;margin:12px 0 8px;line-height:1.15}
+  #angebote .card p{font-size:12px;line-height:1.5}
+  #angebote .chips{font-size:11px;padding:8px 0}
+  #angebote .card-links{margin-top:8px;padding-top:6px;gap:2px}
+  #angebote .card-links a,#angebote .card-links .static-link{font-size:12px}
+  #angebote .card details{padding:8px!important;margin-top:10px!important}
+  #angebote .card details summary{font-size:12px;line-height:1.4;min-height:32px}
+}
 </style>
 </head>
 <body>
